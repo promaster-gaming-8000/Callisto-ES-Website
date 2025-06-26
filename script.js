@@ -28,6 +28,7 @@ function goNextPage() {
                 paper1.style.zIndex = 3;
                 document.querySelector('.arrow-left').classList.remove("blackout-button");
                 document.querySelector('.arrow-left').classList.add("arrow-book");
+                document.querySelector('.container-callisto-book-header').style.opacity="1";
                 break;
             case 2:
                 paper1.style.zIndex = 1;
@@ -52,6 +53,7 @@ function goPrevPage() {
                 paper1.style.zIndex = 3;
                 document.querySelector('.arrow-left').classList.remove("arrow-book");
                 document.querySelector('.arrow-left').classList.add("blackout-button");
+                document.querySelector('.container-callisto-book-header').style.opacity="0";
                 break;
             case 3:
                 paper2.classList.remove("flipped");
