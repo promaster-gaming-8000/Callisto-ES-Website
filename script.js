@@ -68,3 +68,16 @@ function goPrevPage() {
         currentLocation--;
     }
 }
+function revealBook() {
+    document.querySelector('.eros-psycho-left-section').style.width="350px";
+    document.querySelector('.book-section').style.display="flex";
+    document.querySelector('.portfolio-buttons').style.display="block";
+    document.getElementById('IDrevealBook').classList.remove('eros-psycho-temp');
+    document.getElementById('IDrevealBook').classList.add('eros-psycho');
+    setInterval(waitRevealBook, 1)
+    function waitRevealBook() {
+        document.querySelector('.portfolio-buttons').style.opacity="1";
+        document.querySelector('.book-section').style.opacity="1";
+        document.querySelector('.book-right-section').style.width="350px";
+    }
+}
