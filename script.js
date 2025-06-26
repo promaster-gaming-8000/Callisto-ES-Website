@@ -26,11 +26,15 @@ function goNextPage() {
                 openBook();
                 paper1.classList.add("flipped");
                 paper1.style.zIndex = 3;
+                document.querySelector('.arrow-left').classList.remove("blackout-button");
+                document.querySelector('.arrow-left').classList.add("arrow-book");
                 break;
             case 2:
                 paper1.style.zIndex = 1;
                 paper2.classList.add("flipped");
                 paper2.style.zIndex = 2;
+                document.querySelector('.arrow-right').classList.remove("arrow-book");
+                document.querySelector('.arrow-right').classList.add("blackout-button");
                 break;
             default:
                 throw new Error("Unkown State");
@@ -46,10 +50,14 @@ function goPrevPage() {
                 closeBook(true);
                 paper1.classList.remove("flipped");
                 paper1.style.zIndex = 3;
+                document.querySelector('.arrow-left').classList.remove("arrow-book");
+                document.querySelector('.arrow-left').classList.add("blackout-button");
                 break;
             case 3:
                 paper2.classList.remove("flipped");
                 paper2.style.zIndex = 2;
+                document.querySelector('.arrow-right').classList.remove("blackout-button");
+                document.querySelector('.arrow-right').classList.add("arrow-book");
                 break;
             default:
                 throw new Error("unkown state");
